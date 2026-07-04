@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Setup Mobile Hamburger Menu
   setupHamburgerMenu();
+
+  // Setup Scroll Spy active nav links
+  setupScrollSpy();
 });
 
 /**
@@ -643,6 +646,41 @@ function setupVerticalSlideshow() {
 
   // Initialize first slide states
   goToSlide(0);
+}
+
+/**
+ * Scroll Spy to highlight the active navigation section as the user scrolls.
+ */
+function setupScrollSpy() {
+  const sections = document.querySelectorAll('main.hero-section, section.sv-section, section.why-section, section.appt-section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  if (!sections.length || !navLinks.length) return;
+
+  window.addEventListener('scroll', () => {
+    let currentSectionId = '';
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    const headerHeight = document.querySelector('.header').offsetHeight || 80;
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - headerHeight - 120;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        currentSectionId = sectionId;
+      }
+    });
+
+    if (currentSectionId) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  }, { passive: true });
 }
 
 
