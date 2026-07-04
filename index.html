@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dentist - Exceptional Dental Care & Straight Smile</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=12">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-container">
+        <div class="logo-icon">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="24" fill="#121214"/>
+            <path d="M30 45C30 35 38 28 48 28C58 28 66 35 66 45C66 52 61 58 56 61C52 63.5 48 67 48 72H42C42 65 47 61 51 58C55 55 58 51 58 45C58 39 53 34 48 34C43 34 38 39 38 45H30Z" fill="white"/>
+            <path d="M40 72H50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">Dentist</span>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Our Services</a>
+        <a href="#clinics">Our Clinics</a>
+        <a href="#contact">Contact</a>
+        <button class="btn-signin mobile-signin">Sign in</button>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-signin desktop-signin">Sign in</button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero-section">
+    <!-- Faint Watermark Text in Background -->
+    <div class="watermark-bg">Dentist</div>
+
+    <!-- Main Grid Content -->
+    <div class="hero-grid">
+      
+      <!-- Left Content Column -->
+      <div class="hero-col-left">
+        <!-- Trusted Badge -->
+        <div class="trusted-badge">
+          <span class="pulse-dot"></span>
+          <span>Trusted Dental Care</span>
+        </div>
+
+        <!-- Headline Left Part -->
+        <h1 class="headline headline-left">
+          <span>Exceptional</span>
+          <span class="text-white">Dental Care</span>
+        </h1>
+
+        <!-- Paragraph Description -->
+        <p class="description-text">
+          We combine clinical excellence and modern dental technology to deliver precise, comfortable care that transforms your smile for life.
+        </p>
+
+        <!-- CTA and Stats Container -->
+        <div class="left-actions-container">
+          <button class="btn-book">
+            <span>Book Appointment</span>
+            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+          
+          <div class="stat-box-left">
+            <div class="stat-number-wrapper">
+              <span class="stat-dot">&bull;</span>
+              <span class="stat-number" data-target="827">0</span><span>+</span>
+            </div>
+            <p class="stat-label">Transform your smile quickly and with our exceptional services.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Graphic Column (Holds implant and connections) -->
+      <div class="hero-col-center">
+        <!-- SVG Implant Model -->
+        <div class="implant-container">
+          <!-- Floating Tooltip Left (Root Canal) -->
+          <div class="tooltip-card tooltip-left" id="tooltip-root-canal">
+            <div class="tooltip-title">Root Canal Treatment</div>
+          </div>
+
+          <!-- Floating Tooltip Right (Dental Check Up) -->
+          <div class="tooltip-card tooltip-right" id="tooltip-checkup">
+            <div class="tooltip-title">Dental Check Up</div>
+          </div>
+
+          <!-- Connection Lines SVG -->
+          <svg class="connection-lines" viewBox="0 0 500 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left curve: connects tooltip-left to the abutment collar (approx X=250, Y=330) -->
+            <path id="line-left" d="M 120 370 Q 200 370 240 335" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" />
+            <circle id="dot-left-end" cx="240" cy="335" r="4" fill="white" />
+            
+            <!-- Right curve: connects tooltip-right to the post screw (approx X=250, Y=450) -->
+            <path id="line-right" d="M 380 430 Q 300 450 260 460" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" />
+            <circle id="dot-right-end" cx="260" cy="460" r="4" fill="white" />
+          </svg>
+
+          <!-- 3D Dental Implant SVG -->
+          <!-- Real 3D Photo Dental Implant -->
+          <img src="dental_implant.png" alt="Real Dental Implant Model" class="implant-image">
+        </div>
+      </div>
+
+      <!-- Right Content Column -->
+      <div class="hero-col-right-content">
+
+
+        <!-- Headline Right Part -->
+        <h1 class="headline headline-right">
+          <span>& Straight</span>
+          <span class="text-white font-wide">Smile</span>
+        </h1>
+
+        <!-- Vertical Interactive Control Bar (Right Floating Menu) -->
+        <div class="vertical-control-bar">
+          <button class="control-btn close-btn" aria-label="Close panel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <button class="control-btn nav-dot active" data-slide="1" aria-label="Slide 1"></button>
+          <button class="control-btn nav-dot" data-slide="2" aria-label="Slide 2"></button>
+          <button class="control-btn nav-dot" data-slide="3" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Bottom Stats Box -->
+        <div class="right-stats-container">
+          <div class="stat-box-right">
+            <div class="stat-value"><span class="stat-number" data-target="170">0</span>+</div>
+            <div class="stat-desc">Professional Specialists</div>
+          </div>
+          
+          <div class="stat-box-right">
+            <div class="stat-value"><span class="stat-number" data-target="85">0</span>%</div>
+            <div class="stat-desc">Satisfied Clients</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Section 2: Services — Vertical Slideshow -->
+  <section class="sv-section" id="services">
+    <div class="sv-inner">
+
+      <!-- Left: Header + Controls -->
+      <div class="sv-left">
+        <span class="sv-badge">Specialties</span>
+        <h2 class="sv-heading">Our Core<br><em>Treatments</em></h2>
+        <p class="sv-desc">World-class dental care tailored to your smile. Swipe through our four flagship services below.</p>
+
+        <!-- Vertical dot nav -->
+        <div class="sv-dots" id="svDots">
+          <button class="sv-dot active" data-slide="0">
+            <span class="sv-dot-label">Dental Implants</span>
+          </button>
+          <button class="sv-dot" data-slide="1">
+            <span class="sv-dot-label">Teeth Whitening</span>
+          </button>
+          <button class="sv-dot" data-slide="2">
+            <span class="sv-dot-label">Braces</span>
+          </button>
+          <button class="sv-dot" data-slide="3">
+            <span class="sv-dot-label">Smile Makeover</span>
+          </button>
+        </div>
+
+        <!-- Prev / Next arrows -->
+        <div class="sv-arrows">
+          <button class="sv-arrow" id="svPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+          </button>
+          <button class="sv-arrow" id="svNext" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Vertical slider viewport -->
+      <div class="sv-viewport">
+        <div class="sv-track" id="svTrack">
+
+          <!-- Slide 1: Dental Implants -->
+          <div class="sv-slide">
+            <div class="sv-card">
+              <div class="sv-number">01</div>
+              <div class="sv-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C6.5 2 4.5 4.5 4.5 7.5c0 3.5 2.5 5 2.5 8.5 0 2.5-1 4-1 4h12s-1-1.5-1-4c0-3.5 2.5-5 2.5-8.5C19.5 4.5 17.5 2 12 2z"/>
+                  <path d="M12 16v6"/><path d="M9 19h6"/>
+                </svg>
+              </div>
+              <div class="sv-card-body">
+                <h3>Dental Implants</h3>
+                <p>Permanent, natural-looking replacements for missing teeth crafted from high-grade titanium and porcelain. Restore your bite, speech, and confidence for life.</p>
+                <div class="sv-tags">
+                  <span>Titanium Posts</span>
+                  <span>Porcelain Crown</span>
+                  <span>Lifetime Results</span>
+                </div>
+                <a href="#contact" class="sv-cta">Book Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Teeth Whitening -->
+          <div class="sv-slide">
+            <div class="sv-card">
+              <div class="sv-number">02</div>
+              <div class="sv-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v2M12 19v2M5 12H3M21 12h-2M18.36 5.64l-1.42 1.42M7.05 16.95l-1.42 1.42M18.36 18.36l-1.42-1.42M7.05 7.05L5.64 5.64"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <div class="sv-card-body">
+                <h3>Teeth Whitening</h3>
+                <p>Advanced laser whitening procedures that lift deep stains and brighten your smile by up to eight shades in a single comfortable one-hour session.</p>
+                <div class="sv-tags">
+                  <span>Laser Whitening</span>
+                  <span>8 Shades Brighter</span>
+                  <span>1 Hour Session</span>
+                </div>
+                <a href="#contact" class="sv-cta">Book Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Braces -->
+          <div class="sv-slide">
+            <div class="sv-card">
+              <div class="sv-number">03</div>
+              <div class="sv-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h18"/>
+                  <path d="M6 8v8M10 8v8M14 8v8M18 8v8"/>
+                  <rect x="5" y="10" width="2" height="4" rx="0.5"/>
+                  <rect x="9" y="10" width="2" height="4" rx="0.5"/>
+                  <rect x="13" y="10" width="2" height="4" rx="0.5"/>
+                  <rect x="17" y="10" width="2" height="4" rx="0.5"/>
+                </svg>
+              </div>
+              <div class="sv-card-body">
+                <h3>Braces</h3>
+                <p>Modern orthodontic solutions including clear aligners and ceramic braces, designed for comfortable and discreet teeth straightening at any age.</p>
+                <div class="sv-tags">
+                  <span>Clear Aligners</span>
+                  <span>Ceramic Braces</span>
+                  <span>All Ages</span>
+                </div>
+                <a href="#contact" class="sv-cta">Book Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Smile Makeover -->
+          <div class="sv-slide">
+            <div class="sv-card">
+              <div class="sv-number">04</div>
+              <div class="sv-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                  <line x1="9" y1="9" x2="9.01" y2="9"/>
+                  <line x1="15" y1="9" x2="15.01" y2="9"/>
+                </svg>
+              </div>
+              <div class="sv-card-body">
+                <h3>Smile Makeover</h3>
+                <p>A comprehensive cosmetic transformation combining veneers, bonding, whitening, and contouring — custom designed for your perfect, radiant aesthetic smile.</p>
+                <div class="sv-tags">
+                  <span>Veneers</span>
+                  <span>Bonding</span>
+                  <span>Full Redesign</span>
+                </div>
+                <a href="#contact" class="sv-cta">Book Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Progress bar -->
+        <div class="sv-progress"><div class="sv-progress-fill" id="svProgressFill"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Why Choose Us Section -->
+  <section class="why-section" id="why-us">
+    <div class="why-container">
+
+      <!-- Left: Content side -->
+      <div class="why-left">
+        <div class="why-header">
+          <span class="why-subtitle">Why Us</span>
+          <h2 class="why-title">Why Choose <br><em>Our Clinic</em></h2>
+          <p class="why-intro">We combine world-class expertise with compassionate care &mdash; giving every patient a comfortable, confident smile.</p>
+        </div>
+
+        <div class="why-grid">
+          <!-- Point 1 -->
+          <div class="why-card" data-index="0">
+            <div class="why-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L3.09 6.26A2 2 0 0 0 2 8.18v4.18c0 3.95 2.68 7.67 6.59 9.23L12 23l3.41-1.41C19.32 20.03 22 16.31 22 12.36V8.18a2 2 0 0 0-1.09-1.92L12 2z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div class="why-card-text">
+              <h4>Certified Dentists</h4>
+              <p>Our team holds international board certifications and 15+ years of combined clinical excellence.</p>
+            </div>
+          </div>
+
+          <!-- Point 2 -->
+          <div class="why-card" data-index="1">
+            <div class="why-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+              </svg>
+            </div>
+            <div class="why-card-text">
+              <h4>Advanced Technology</h4>
+              <p>3D imaging, laser dentistry, and digital smile design for precise, modern treatment outcomes.</p>
+            </div>
+          </div>
+
+          <!-- Point 3 -->
+          <div class="why-card" data-index="2">
+            <div class="why-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <div class="why-card-text">
+              <h4>Pain-Free Treatment</h4>
+              <p>Gentle anaesthetic techniques and sedation options ensure a stress-free, comfortable chair experience.</p>
+            </div>
+          </div>
+
+          <!-- Point 4 -->
+          <div class="why-card" data-index="3">
+            <div class="why-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="why-card-text">
+              <h4>Personalised Care</h4>
+              <p>Every treatment plan is tailored uniquely to you &mdash; your smile, your goals, your timeline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Testimonial Slideshow -->
+      <div class="why-right">
+        <div class="slideshow-wrapper">
+          <div class="slideshow-track" id="slideshowTrack">
+
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="slide-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.293 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.293 3.996-5.849h-3.983v-10h9.983z"/></svg>
+              </div>
+              <p class="slide-text">"I was terrified of dentists my whole life. The team here made me feel completely at ease. My implants look and feel completely natural. Best decision I ever made."</p>
+              <div class="slide-author">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #a8c8e0, #c7dbe8);">
+                  <span>SA</span>
+                </div>
+                <div>
+                  <strong>Sarah Ahmed</strong>
+                  <span>Dental Implants Patient</span>
+                </div>
+              </div>
+              <div class="slide-stars">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="slide-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.293 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.293 3.996-5.849h-3.983v-10h9.983z"/></svg>
+              </div>
+              <p class="slide-text">"The whitening treatment exceeded all my expectations. Eight shades brighter in a single session! The staff were professional, gentle, and incredibly thorough."</p>
+              <div class="slide-author">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #b8d4c8, #d4e8e0);">
+                  <span>MK</span>
+                </div>
+                <div>
+                  <strong>Michael Khan</strong>
+                  <span>Teeth Whitening Patient</span>
+                </div>
+              </div>
+              <div class="slide-stars">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="slide-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.293 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.293 3.996-5.849h-3.983v-10h9.983z"/></svg>
+              </div>
+              <p class="slide-text">"My smile makeover transformed not just my teeth, but my confidence. The personalised plan they created for me was perfect. I can't stop smiling now!"</p>
+              <div class="slide-author">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #d4c8e0, #e8d4f0);">
+                  <span>PL</span>
+                </div>
+                <div>
+                  <strong>Priya Lal</strong>
+                  <span>Smile Makeover Patient</span>
+                </div>
+              </div>
+              <div class="slide-stars">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+              <div class="slide-quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.293 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.293 3.996-5.849h-3.983v-10h9.983z"/></svg>
+              </div>
+              <p class="slide-text">"After 18 months with clear aligners my teeth are perfectly straight. The team guided me every step of the way and the results are absolutely stunning."</p>
+              <div class="slide-author">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #e0d4a8, #f0e8c8);">
+                  <span>JR</span>
+                </div>
+                <div>
+                  <strong>James Reid</strong>
+                  <span>Braces Patient</span>
+                </div>
+              </div>
+              <div class="slide-stars">
+                <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slideshow Controls -->
+          <div class="slideshow-controls">
+            <button class="slide-btn slide-prev" id="slidePrev" aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="slide-dots" id="slideDots">
+              <button class="slide-dot active" data-slide="0"></button>
+              <button class="slide-dot" data-slide="1"></button>
+              <button class="slide-dot" data-slide="2"></button>
+              <button class="slide-dot" data-slide="3"></button>
+            </div>
+            <button class="slide-btn slide-next" id="slideNext" aria-label="Next slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="slide-progress-bar">
+            <div class="slide-progress-fill" id="slideProgressFill"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Appointment + Contact â€” REBUILT -->
+  <section class="appt-section" id="contact">
+    <div class="appt-wrapper">
+
+      <!-- LEFT: Deep blue info panel -->
+      <div class="appt-info-panel">
+        <span class="appt-badge">ðŸ“… Book Now</span>
+        <h2 class="appt-heading">Book Your<br><span>Appointment</span></h2>
+        <p class="appt-tagline">Ready for a healthier smile? Our team confirms your slot within 2 hours.</p>
+
+        <div class="appt-contact-list">
+          <div class="appt-contact-row">
+            <div class="appt-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.41 1h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.65 2.82a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.92.3 1.86.52 2.82.65A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="appt-contact-label">Phone</p>
+              <a class="appt-contact-value" href="tel:+923001234567">+92 300 123 4567</a>
+            </div>
+          </div>
+
+          <div class="appt-contact-row">
+            <div class="appt-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <p class="appt-contact-label">Address</p>
+              <span class="appt-contact-value">14 Dental Avenue, Gulberg III<br>Lahore, Pakistan</span>
+            </div>
+          </div>
+
+          <div class="appt-contact-row">
+            <div class="appt-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <p class="appt-contact-label">Working Hours</p>
+              <span class="appt-contact-value">Mon &ndash; Sat: 9:00 AM &ndash; 8:00 PM</span>
+              <span class="appt-contact-sub">Sunday: 10:00 AM &ndash; 4:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#appt-form" class="appt-cta">
+          Book an Appointment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- RIGHT: Clean white form -->
+      <div class="appt-form-panel">
+        <div class="appt-form-header">
+          <h3>Quick Appointment</h3>
+          <p>Fill in the details below and we'll get back to you shortly.</p>
+        </div>
+
+        <form id="appt-form" onsubmit="handleFormSubmit(event)">
+          <div class="appt-form-row">
+            <div class="appt-field">
+              <label for="ap-fname">First Name</label>
+              <input type="text" id="ap-fname" name="fname" placeholder="John" required>
+            </div>
+            <div class="appt-field">
+              <label for="ap-lname">Last Name</label>
+              <input type="text" id="ap-lname" name="lname" placeholder="Doe" required>
+            </div>
+          </div>
+
+          <div class="appt-form-row">
+            <div class="appt-field">
+              <label for="ap-email">Email Address</label>
+              <input type="email" id="ap-email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="appt-field">
+              <label for="ap-phone">Phone Number</label>
+              <input type="tel" id="ap-phone" name="phone" placeholder="+92 300 000 0000">
+            </div>
+          </div>
+
+          <div class="appt-field">
+            <label for="ap-service">Select Service</label>
+            <div class="appt-select-wrap">
+              <select id="ap-service" name="service" required>
+                <option value="" disabled selected>Choose a treatment...</option>
+                <option>Dental Implants</option>
+                <option>Teeth Whitening</option>
+                <option>Braces / Aligners</option>
+                <option>Smile Makeover</option>
+                <option>General Check-up</option>
+                <option>Other</option>
+              </select>
+              <svg class="appt-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+
+          <div class="appt-form-row">
+            <div class="appt-field">
+              <label for="ap-date">Preferred Date</label>
+              <input type="date" id="ap-date" name="date">
+            </div>
+            <div class="appt-field">
+              <label for="ap-time">Preferred Time</label>
+              <div class="appt-select-wrap">
+                <select id="ap-time" name="time">
+                  <option value="" disabled selected>Select time...</option>
+                  <option>09:00 AM</option>
+                  <option>10:00 AM</option>
+                  <option>11:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>02:00 PM</option>
+                  <option>03:00 PM</option>
+                  <option>04:00 PM</option>
+                  <option>05:00 PM</option>
+                  <option>06:00 PM</option>
+                </select>
+                <svg class="appt-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="appt-field">
+            <label for="ap-notes">Additional Notes</label>
+            <textarea id="ap-notes" name="notes" rows="3" placeholder="Tell us anything important about your visit..."></textarea>
+          </div>
+
+          <button type="submit" class="appt-submit-btn" id="formSubmitBtn">
+            <span class="btn-text">Confirm Appointment</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </button>
+
+          <!-- Success state -->
+          <div class="appt-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <strong>Appointment Requested!</strong>
+            <span>We'll confirm your booking within 2 hours.</span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo-container">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="30" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+            <path d="M30 45C30 35 38 28 48 28C58 28 66 35 66 45C66 52 61 58 56 61C52 63.5 48 67 48 72H42C42 65 47 61 51 58C55 55 58 51 58 45C58 39 53 34 48 34C43 34 38 39 38 45H30Z" fill="white"/>
+            <path d="M40 72H50" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2 class="footer-logo">Dentist</h2>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://wa.me/923001234567" target="_blank" class="social-btn" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <!-- Interactive JS -->
+  <script src="app.js?v=5" defer></script>
+
+</body>
+</html>
