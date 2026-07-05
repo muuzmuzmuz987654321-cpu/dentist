@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Setup Scroll Spy active nav links
   setupScrollSpy();
+
+  // Setup Premium Scroll Reveals
+  setupPremiumScrollReveals();
 });
 
 /**
@@ -681,6 +684,30 @@ function setupScrollSpy() {
       });
     }
   }, { passive: true });
+}
+
+/**
+ * General premium scroll reveals for elements marked with .reveal.
+ */
+function setupPremiumScrollReveals() {
+  const revealElements = document.querySelectorAll('.reveal');
+  if (!revealElements.length) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  revealElements.forEach(el => observer.observe(el));
 }
 
 

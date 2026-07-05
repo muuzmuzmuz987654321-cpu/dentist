@@ -19,7 +19,7 @@
       <div class="logo-container">
         <div class="logo-icon">
           <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="24" fill="#121214"/>
+            <rect width="100" height="100" rx="24" fill="#0f172a"/>
             <path d="M30 45C30 35 38 28 48 28C58 28 66 35 66 45C66 52 61 58 56 61C52 63.5 48 67 48 72H42C42 65 47 61 51 58C55 55 58 51 58 45C58 39 53 34 48 34C43 34 38 39 38 45H30Z" fill="white"/>
             <path d="M40 72H50" stroke="white" stroke-width="2" stroke-linecap="round"/>
           </svg>
@@ -46,6 +46,10 @@
 
   <!-- Hero Section -->
   <main class="hero-section" id="home">
+    <!-- Ambient Glow Spheres for Visual Depth -->
+    <div class="glow-sphere glow-primary animate-float"></div>
+    <div class="glow-sphere glow-secondary animate-float" style="animation-delay: 2s;"></div>
+
     <!-- Faint Watermark Text in Background -->
     <div class="watermark-bg">Dentist</div>
 
@@ -87,6 +91,30 @@
               <span class="stat-number" data-target="827">0</span><span>+</span>
             </div>
             <p class="stat-label">Transform your smile quickly and with our exceptional services.</p>
+          </div>
+        </div>
+
+        <!-- Premium Trust Badges Row -->
+        <div class="hero-trust-badges">
+          <div class="trust-badge-item">
+            <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+            </svg>
+            <span><strong>4.9/5</strong> Google Rating</span>
+          </div>
+          <div class="trust-badge-divider"></div>
+          <div class="trust-badge-item">
+            <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span><strong>Sterile</strong> & Safe Clinic</span>
+          </div>
+          <div class="trust-badge-divider"></div>
+          <div class="trust-badge-item">
+            <svg class="trust-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+            <span><strong>100% Pain-Free</strong> Techniques</span>
           </div>
         </div>
       </div>
@@ -168,12 +196,12 @@
 
       <!-- Left: Header + Controls -->
       <div class="sv-left">
-        <span class="sv-badge">Specialties</span>
-        <h2 class="sv-heading">Our Core<br><em>Treatments</em></h2>
-        <p class="sv-desc">World-class dental care tailored to your smile. Swipe through our four flagship services below.</p>
+        <span class="sv-badge reveal reveal-slide-up">Specialties</span>
+        <h2 class="sv-heading reveal reveal-slide-up delay-100">Our Core<br><em>Treatments</em></h2>
+        <p class="sv-desc reveal reveal-slide-up delay-200">World-class dental care tailored to your smile. Swipe through our four flagship services below.</p>
 
         <!-- Vertical dot nav -->
-        <div class="sv-dots" id="svDots">
+        <div class="sv-dots reveal reveal-slide-up delay-300" id="svDots">
           <button class="sv-dot active" data-slide="0">
             <span class="sv-dot-label">Dental Implants</span>
           </button>
@@ -189,7 +217,7 @@
         </div>
 
         <!-- Prev / Next arrows -->
-        <div class="sv-arrows">
+        <div class="sv-arrows reveal reveal-slide-up delay-400">
           <button class="sv-arrow" id="svPrev" aria-label="Previous">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
           </button>
@@ -200,7 +228,7 @@
       </div>
 
       <!-- Right: Vertical slider viewport -->
-      <div class="sv-viewport">
+      <div class="sv-viewport reveal reveal-slide-right delay-200">
         <div class="sv-track" id="svTrack">
 
           <!-- Slide 1: Dental Implants -->
@@ -319,9 +347,9 @@
       <!-- Left: Content side -->
       <div class="why-left">
         <div class="why-header">
-          <span class="why-subtitle">Why Us</span>
-          <h2 class="why-title">Why Choose <br><em>Our Clinic</em></h2>
-          <p class="why-intro">We combine world-class expertise with compassionate care &mdash; giving every patient a comfortable, confident smile.</p>
+          <span class="why-subtitle reveal reveal-slide-up">Why Us</span>
+          <h2 class="why-title reveal reveal-slide-up delay-100">Why Choose <br><em>Our Clinic</em></h2>
+          <p class="why-intro reveal reveal-slide-up delay-200">We combine world-class expertise with compassionate care &mdash; giving every patient a comfortable, confident smile.</p>
         </div>
 
         <div class="why-grid">
@@ -385,7 +413,7 @@
       </div>
 
       <!-- Right: Testimonial Slideshow -->
-      <div class="why-right">
+      <div class="why-right reveal reveal-slide-right delay-300">
         <div class="slideshow-wrapper">
           <div class="slideshow-track" id="slideshowTrack">
 
@@ -396,7 +424,7 @@
               </div>
               <p class="slide-text">"I was terrified of dentists my whole life. The team here made me feel completely at ease. My implants look and feel completely natural. Best decision I ever made."</p>
               <div class="slide-author">
-                <div class="slide-avatar" style="background: linear-gradient(135deg, #a8c8e0, #c7dbe8);">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #eff6ff, #dbeafe);">
                   <span>SA</span>
                 </div>
                 <div>
@@ -416,7 +444,7 @@
               </div>
               <p class="slide-text">"The whitening treatment exceeded all my expectations. Eight shades brighter in a single session! The staff were professional, gentle, and incredibly thorough."</p>
               <div class="slide-author">
-                <div class="slide-avatar" style="background: linear-gradient(135deg, #b8d4c8, #d4e8e0);">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #f1f5f9, #e2e8f0);">
                   <span>MK</span>
                 </div>
                 <div>
@@ -436,7 +464,7 @@
               </div>
               <p class="slide-text">"My smile makeover transformed not just my teeth, but my confidence. The personalised plan they created for me was perfect. I can't stop smiling now!"</p>
               <div class="slide-author">
-                <div class="slide-avatar" style="background: linear-gradient(135deg, #d4c8e0, #e8d4f0);">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #ecfdf5, #d1fae5);">
                   <span>PL</span>
                 </div>
                 <div>
@@ -456,7 +484,7 @@
               </div>
               <p class="slide-text">"After 18 months with clear aligners my teeth are perfectly straight. The team guided me every step of the way and the results are absolutely stunning."</p>
               <div class="slide-author">
-                <div class="slide-avatar" style="background: linear-gradient(135deg, #e0d4a8, #f0e8c8);">
+                <div class="slide-avatar" style="background: linear-gradient(135deg, #eff6ff, #e0f2fe);">
                   <span>JR</span>
                 </div>
                 <div>
@@ -502,8 +530,8 @@
     <div class="appt-wrapper">
 
       <!-- LEFT: Deep blue info panel -->
-      <div class="appt-info-panel">
-        <span class="appt-badge">ðŸ“… Book Now</span>
+      <div class="appt-info-panel reveal reveal-slide-left">
+        <span class="appt-badge">📅 Book Now</span>
         <h2 class="appt-heading">Book Your<br><span>Appointment</span></h2>
         <p class="appt-tagline">Ready for a healthier smile? Our team confirms your slot within 2 hours.</p>
 
@@ -547,7 +575,7 @@
       </div>
 
       <!-- RIGHT: Clean white form -->
-      <div class="appt-form-panel">
+      <div class="appt-form-panel reveal reveal-slide-right delay-100">
         <div class="appt-form-header">
           <h3>Quick Appointment</h3>
           <p>Fill in the details below and we'll get back to you shortly.</p>
